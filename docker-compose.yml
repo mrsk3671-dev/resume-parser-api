@@ -1,0 +1,9 @@
+services:
+  resume-api:
+    build: .
+    container_name: resume-parser-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app/app
+    restart: always
