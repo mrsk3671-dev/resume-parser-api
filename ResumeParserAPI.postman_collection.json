@@ -1,0 +1,49 @@
+{
+  "info": {
+    "name": "Resume Parser API",
+    "description": "Postman collection for testing Resume Parser API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": [""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Parse Resume",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": []
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/parse_resume",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["parse_resume"]
+        }
+      },
+      "response": []
+    }
+  ]
+}

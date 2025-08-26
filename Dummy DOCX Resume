@@ -1,0 +1,23 @@
+from docx import Document
+
+def create_resume_docx(filename="resume.docx"):
+    doc = Document()
+    doc.add_heading("John Doe", 0)
+
+    doc.add_paragraph("Email: john.doe@example.com")
+    doc.add_paragraph("Phone: +1 555 123 4567")
+
+    doc.add_heading("Experience", level=1)
+    doc.add_paragraph("Software Engineer at ABC Corp (2019–2023)\nWorked on Python, FastAPI, and Docker-based projects.")
+    doc.add_paragraph("Intern at XYZ Ltd (2018–2019)\nAssisted in developing web applications with Django.")
+
+    doc.add_heading("Education", level=1)
+    doc.add_paragraph("B.Sc. in Computer Science, Stanford University (2015–2019)")
+
+    doc.add_heading("Skills", level=1)
+    doc.add_paragraph("Python, FastAPI, Docker, SQL, Git, Linux")
+
+    doc.save(filename)
+
+if __name__ == "__main__":
+    create_resume_docx()
